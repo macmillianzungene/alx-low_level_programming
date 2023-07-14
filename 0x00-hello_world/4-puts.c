@@ -1,6 +1,9 @@
 #include <stdio.h>
 /**
-* main - This is my main entry point
+* main - Entry point
+*
+* Description: Writing a C program using puts function
+*
 * return: always 0 (success)
 */
 int main(void)
