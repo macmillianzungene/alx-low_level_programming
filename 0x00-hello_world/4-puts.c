@@ -3,6 +3,7 @@
 * main - Entry point
 *
 * Description: Writing a C program using puts function
+* @parameter: my parameter has to be 0
 *
 * return: always 0 (success)
 */
