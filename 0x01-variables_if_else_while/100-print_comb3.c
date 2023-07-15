@@ -6,8 +6,7 @@
   */
 int main(void)
 {
-	int n = 0;
-	int m;
+	int n = 0, m;
 
 	while (n <= 9)
 	{
@@ -17,7 +16,7 @@ int main(void)
 			if (n != m && n < m)
 			{
 				putchar(n + 48);
-				putchar(n + 48);
+				putchar(m + 48);
 
 				if (n + m != 17)
 				{
