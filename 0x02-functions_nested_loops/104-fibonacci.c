@@ -58,7 +58,7 @@ int main(void)
 		bbo = sumo;
 
 		if (count != 98)
-			printf(".");
+			printf(", ");
 		else
 			printf("\n");
 	}
