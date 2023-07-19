@@ -5,27 +5,27 @@
   *
   * Description: print the sum of the even-valued fibonacci numbers.
   *
-  * return: Always 0 (Success)
+  * Return: Always 0 (Success)
   */
 int main(void)
 {
-	unsigned long fib1 = 0, fib2 = 1, sum;
-	float total_sum;
+	unsigned long a = 0, b = 1, sum;
+	float _sum;
 
 	while (1)
 	{
-		sum = fib1 + fib2;
+		sum = a + b;
 
 		if (sum > 4000000)
 			break;
 
 		if ((sum % 2) == 0)
-			total_sum += sum;
+			_sum += sum;
 
-		fib1 = fib2;
-		fib2 = sum;
+		a = b;
+		b = sum;
 	}
-	printf("%.0f\n", total_sum);
+	printf("%.0f\n", _sum);
 
 	return (0);
 }
