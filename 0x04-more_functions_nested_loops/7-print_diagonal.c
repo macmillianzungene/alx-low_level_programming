@@ -7,17 +7,17 @@
   */
 void print_diagonal(int n)
 {
-	int diagonal, line;
+	int postn, space;
 
 	if (n <= 0)
 		_putchar('\n');
 	else
 	{
-		for (diagonal = 1; diagonal <= n; diagonal++)
+		for (postn = 1; postn <= n; postn++)
 		{
-			for (line = 1; line <= diagonal; line++)
+			for (space = 1; space <= postn; space++)
 				_putchar(' ');
-			_putchar(92); /* is equal to '/' char*/
+			_putchar(92); /*is equal to '/' char*/
 			_putchar('\n');
 		}
 	}
