@@ -1,17 +1,14 @@
 #include "main.h"
 
 /**
-  * print_numbers - print 0 - 9 numbers
+  * mul - multiplying two numbers
   *
-  * Return: Always 0
+  * @a: fisrt input
+  * @b: second input
+  *
+  * Return: Results
   */
-void print_numbers(void)
+int mul(int a, int b)
 {
-	int n = 0;
-
-	do {
-		_putchar(n + 48);
-		n++;
-	} while (n >= 0 && n <= 9);
-	_putchar('\n');
+	return (a * b);
 }
