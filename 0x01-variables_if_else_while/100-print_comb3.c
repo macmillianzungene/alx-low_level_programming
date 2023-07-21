@@ -1,10 +1,10 @@
 #include <stdio.h>
-/**
- * main - Entry point
- * Description: 'print different combination of two digits'
+2/**
+3 * main - Entry point
+4 * Description: 'print different combination of two digits'
  * Return: Always 0
  */
-int main(void)
+7int main(void)
 {
 	int n = 0, m;
 
