@@ -4,14 +4,14 @@
 /**
   * print_diagsums - prints the sum of the two diagonals of a square matrix
   *
-  * @a: input
+  * @a: input type of array
   * @size: array size
   */
 void print_diagsums(int *a, int size)
 {
 	int _num, b = 0, d = 0;
 
-	for (_num = 0; _num < size; _num)
+	for (_num = 0; _num < size; _num++)
 	{
 		b += a[_num];
 		d += a[size - _num - 1];
