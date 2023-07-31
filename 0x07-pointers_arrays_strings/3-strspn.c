@@ -6,6 +6,7 @@
   * @s: input string
   * @accept: bytes
   *
+  * Return: results
   */
 unsigned int _strspn(char *s, char *accept)
 {
