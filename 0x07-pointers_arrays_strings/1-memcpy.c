@@ -3,7 +3,7 @@
 /**
   * *_memcpy - function that copies memory area.
   *
-  * @*dest: input dest
+  * @dest: input dest
   * @src: source
   * @n: input number
   *
