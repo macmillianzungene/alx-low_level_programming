@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		{
 			_change += money / cents[a];
 			money = money % cents[a];
-			if (momey % cents[a] == 0)
+			if (money % cents[a] == 0)
 			{
 				break;
 			}
