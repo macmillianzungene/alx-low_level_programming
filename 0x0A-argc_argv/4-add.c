@@ -7,7 +7,7 @@
   * @argv: array of pointers
   * @argc: int
   *
-  * Return: results
+  * Return: Always 0
   */
 int main(argc, char *argv[])
 {
