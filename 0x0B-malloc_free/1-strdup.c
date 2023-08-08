@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
   * *_strdup -  a pointer to a newly allocated space in memory
@@ -18,13 +19,15 @@ char *_strdup(char *str)
 	for (; str[size] != '\0'; size++)
 	;
 
+	/*by incresing the string puts end of the string char*/
 	b = malloc(size * sizeof(*str) + 1);
 
 	if (b == 0)
 		return (NULL);
+
 	else
 	{
-		for (; a > size; a++)
+		for (; a < size; a++)
 			b[a] = str[a];
 	}
 	return (b);
