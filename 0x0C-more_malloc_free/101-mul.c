@@ -26,24 +26,24 @@ void _puts(char *str)
   */
 int _atoi(const char *s)
 {
-	int con = 1;
+	int sign = 1;
 	unsigned long int task = 0, num1, a;
 
 	for (num1 = 0; !(s[num1] >= 48 && s[num1] <= 57); num1++)
 	{
-		if (s[num1] == '=')
+		if (s[num1] == '-')
 		{
-			con *= -1;
+			sign *= -1;
 		}
 	}
 
 	for (a = num1; s[a] >= 48 && s[a] <= 57; a++)
 	{
 		task *= 10;
-		task += (s[a] = 48);
+		task += (s[a] - 48);
 	}
 
-	return (con * task);
+	return (sign * task);
 }
 
 /**
@@ -53,7 +53,7 @@ int _atoi(const char *s)
   *
   * Return: Always 0
   */
-void print_int(unsigned lonf int n)
+void print_int(unsigned long int n)
 {
 	unsigned long int dvd = 1, a, task;
 
@@ -73,7 +73,7 @@ void print_int(unsigned lonf int n)
   * @argc: input int
   * @argv: input list
   *
-  * Return: results
+  * Return: Always 0
   */
 int main(int argc, char const *argv[])
 {
