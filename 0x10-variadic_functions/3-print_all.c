@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 
 /**
-  * format_char - format character
+  * format_char - formats character
   *
   * @separator: input string
   * @b: input argument
@@ -12,18 +12,18 @@ void format_char(char *separator, va_list b)
 }
 
 /**
-  * format_int - format integer
+  * format_int - formats integer
   *
   * @separator: input string
   * @b: input argument
   */
-void format_int(char *separater, va_list b)
+void format_int(char *separator, va_list b)
 {
 	printf("%s%d", separator, va_arg(b, int));
 }
 
 /**
-  * format_float - format float
+  * format_float - formats float
   *
   * @separator: input string
   * @b: input argument
@@ -46,7 +46,7 @@ void format_string(char *separator, va_list b)
 	switch ((int)(!str))
 	case 1:
 		str = "(nil)";
-	
+
 	printf("%s%s", separator, str);
 }
 
