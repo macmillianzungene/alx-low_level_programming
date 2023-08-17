@@ -10,14 +10,14 @@
   */
 int sum_them_all(const unsigned int n, ...)
 {
-	int k = 0, a = n;
-	va_list b;
+	int s = 0, a = n;
+	va_list ap;
 
 	if (!n)
 		return (0);
-	va_start(b, n);
+	va_start(ap, n);
 	while (a--)
-		k += va_arg(b, int);
-	va_end(b);
-	return (k);
+		s += va_arg(ap, int);
+	va_end(ap);
+	return (s);
 }
