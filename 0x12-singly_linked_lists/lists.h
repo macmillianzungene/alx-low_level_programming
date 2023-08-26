@@ -11,7 +11,7 @@
   *
   * @str: input string
   * @len: input length
-  * @next input next node
+  * @next: input next node
   *
   * Description: list node structure
   *
