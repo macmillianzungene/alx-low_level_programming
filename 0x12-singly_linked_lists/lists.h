@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stddef.h>
 
 /**
   * struct list_s - linked list
@@ -17,9 +18,9 @@
   */
 typedef struct list_s
 {
-	char *str;
-	unsigned int len;
-	struct list_s *next;
+char *str;
+unsigned int len;
+struct list_s *next;
 } list_t;
 
 int _putchar(char c);
