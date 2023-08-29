@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
-  * insert_nodeint_at_index - function that inserts a new node at a given position
+  * insert_nodeint_at_index - function that inserts new node at given position
   *
   * @head: input pointer
   * @idx: input value
@@ -28,7 +28,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	node = *head;
 	while (node)
 	{
-		if (a == idx -1)
+		if (a == idx - 1)
 		{
 			new_node->next = node->next;
 			node->next = new_node;
