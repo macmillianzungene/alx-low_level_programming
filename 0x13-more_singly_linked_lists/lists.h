@@ -1,5 +1,5 @@
 #ifndef LISTS_H
-#define LIATS_H
+#define LISTS_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,13 +11,13 @@
   * @n: input integer
   * @next: input next node
   *
-  * Describtion: linkedl linked node structure
+  * Describtion: singly linked node structure
   */
-typedef struct listint_s *next
+typedef struct listint_s
 {
-	int = n;
-	struct listing_s *next
-} listint_s
+	int n;
+	struct listint_s *next;
+} listint_t;
 
 int _putchar(char c);
 size_t print_listint(const listint_t *h);
