@@ -2,28 +2,30 @@
 #include <stdlib.h>
 
 /**
-  * find_listint_loop_fl - locating the loop in a list
+  * _r - relocating the memory
   *
-  * @head: input pointer
+  * @list: initial list
+  * @size: initial size
+  * @new: input node
   *
   * Return: results
   */
-listint_t *find_listint_loop_fl(listint_t *head)
+listint_t **_r(listint_t **list, size_t size, listint_t *new)
 {
-	listint *ptr, *end;
+	listint_t **newlist;
+	size_t a;
 
-	if (head == NULL)
-		return (NULL);
-
-	for (end = head->next; end != NULL; end = end->next)
+	newlist = maloc(size * sizeof(listint_t *));
+	if (newlist == NULL)
 	{
-		if (end == end->next)
-			return (end);
-		for (ptr = head; ptr != end; ptr = ptr->next)
-			if (ptr == end->next)
-				return (end->next);
+		free(list);
+		exit(98);
 	}
-	return (NULL);
+	for (a = 0; a < size - 1; a++)
+		newlist[a] = list[a];
+	newlist[a] = new;
+	free(list);
+	return (newlist);
 }
 
 
@@ -36,32 +38,28 @@ listint_t *find_listint_loop_fl(listint_t *head)
   */
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *next, *loopnode;
-	size_t len;
-	int loop = 1;
+	listint_t **list = NULL;
+	listint_t *next;
+	size_t a, rnd = 0;
 
 	if (h == NULL || *h == NULL)
-		return (0);
-
-	loopnode = find_listint_loop_fl(*h);
-	for (len = 0; (*h != loopnode || loop) && *h != NULL; *h = next)
+		return (rnd);
+	while (*h != NULL)
 	{
-		len++;
-		next = (*h)->next;
-		if (*h == loopnode && loop)
+		for (a = 0; a < rnd; a++)
 		{
-			if (loopnode == loopnode->next)
+			if (*h == list[a])
 			{
-				free(*h);
-				break;
+				*h = NULL;
+				free(list);
+				return (rnd);
 			}
-			len++;
-			next = next->next;
-			free((*h)->next);
-			loop = 0;
 		}
-		free(*h);
+		rnd++;
+		list = _r(list, rnd, *h);
+		next = (*h);
+		*h = next;
 	}
-	*h = NULL;
-	return (len);
+	free(list);
+	return (rnd);
 }
