@@ -3,7 +3,7 @@
 #define USAGE "Usage: cp file_from file_to\n"
 #define ERR_NOREAD "Error: can't read from file %s\n"
 #define ERR_NOWRITE "Error: can't write to %s\n"
-#define ERR_NOCLOSE "Error: can't close _file %s\n"
+#define ERR_NOCLOSE "Error: can't close _file %d\n"
 #define PERMISSIONS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
 
 /**
@@ -38,9 +38,9 @@ int main(int ac, char **av)
 	_file1 = close(_file1);
 	_file2 = close(_file2);
 	if (_file1)
-		dprintf(STDERR_FILENO, ERR_NOCLOSE, _file1) exit(100);
+		dprintf(STDERR_FILENO, ERR_NOCLOSE, _file1), exit(100);
 	if (_file2)
-		dprintf(STDERR_FILENO, ERR_NOCLOSE, _file1) exit(100);
+		dprintf(STDERR_FILENO, ERR_NOCLOSE, _file1), exit(100);
 
 	return (EXIT_SUCCESS);
 }
