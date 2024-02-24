@@ -5,25 +5,18 @@ OBJ = $(patsubst %.c,%.o,$(SRC))
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
+.PHONY: all clean oclean fclean re
+
 # Rules
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	@$(CC) $(OBJ) -o $(NAME)
-
-$(OBJ): $(SRC)
-	@$(CC) -c $^ $(CFLAGS)
+all: m.h $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	@find . -name "*~" -type f -delete
-	@find . -name "\#*\#" -type f -delete
-	@/bin/rm -f $(NAME)
+	$(RM) *~ $(NAME)
 
 oclean:
-	@/bin/rm -f $(OBJ)
+	$(RM) $(OBJ)
 
 fclean: clean oclean
 
 re: fclean all
-
-.PHONY: all clean oclean fclean re
